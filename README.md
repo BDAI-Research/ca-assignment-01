@@ -54,4 +54,5 @@ Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/g
 ```c++
 g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ```
-Check benchmarking result of the baseline code on your environment and save screenshot. Example is
+Run the baseline code on your system, check the benchmarking results, and take a screenshot. Below is an example:
+![Image](https://github.com/user-attachments/assets/2b24542e-49e0-4f94-8641-41c1ae59462c)
