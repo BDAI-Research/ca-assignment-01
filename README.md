@@ -55,4 +55,34 @@ Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/g
 g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ```
 Run the baseline code on your system, check the benchmarking results, and take a screenshot. Below is an example:
-![Image](https://github.com/user-attachments/assets/2b24542e-49e0-4f94-8641-41c1ae59462c)
+
+Optimize the for-loop in the given code.
+```c++
+#include <benchmark/benchmark.h>
+#include <vector>
+#include <iostream>
+
+constexpr int ARRAY_SIZE = 1000000;
+std::vector<int> A(ARRAY_SIZE, 1);
+
+static void BM_MemoryAccess(benchmark::State& state) {
+    for (auto _ : state) {
+        int sum = 0;
+        for (int i = 0; i < ARRAY_SIZE; i++) {
+            sum += A[i];  
+        }
+        benchmark::DoNotOptimize(sum);
+    }
+}
+BENCHMARK(BM_MemoryAccess);
+
+static void BM_OtimizedMemoryAccess(benchmark::State& state) {
+    # fill here
+}
+BENCHMARK(BM_OptimizedMemoryAccess);
+BENCHMARK_MAIN();
+```
+Complile it and compare its execution speed to see if the performance improves. Also take a screenshot. Below is an example:
+
+Hint: Use registers!
+
