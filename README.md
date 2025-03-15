@@ -14,7 +14,7 @@ You have 14 days to complete this assignment. Please read the instructions caref
 
 To write source code and run Google Benchmark, make sure you have the following packages installed:
 - [Git](https://git-scm.com/downloads)
-- [cmake](https://cmake.org/download/#latest)
+- [CMake](https://cmake.org/download/#latest)
 - [GCC](https://gcc.gnu.org/install/)
 
 ## Getting started
