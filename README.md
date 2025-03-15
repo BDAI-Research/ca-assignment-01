@@ -58,9 +58,9 @@ g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ./benchmark
 ```
 Check the benchmarking results, and take a screenshot. Below is an example:
-
+Third, build a optimized for-loop code module BM_OtimizedMemoryAccess in the given code. Hint: Use registers!
 <img src="./image1.png" alt="Benchmark Result" width="400">
-Third, build a optimized for-loop code module BM_OtimizedMemoryAccess in the given code. Hint: Use registers! 
+ 
 ```c++
 #include <benchmark/benchmark.h>
 #include <vector>
