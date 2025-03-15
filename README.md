@@ -50,13 +50,16 @@ static void BM_MemoryAccess(benchmark::State& state) {
 BENCHMARK(BM_MemoryAccess);
 BENCHMARK_MAIN();
 ```
-Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/google/benchmark?tab=readme-ov-file#installation)). Compile and run the benchmark with:
-```c++
-g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
-```
-Run the baseline code on your system, check the benchmarking results, and take a screenshot. Below is an example:
+First, extract assembled code of it. Extract assembled code as a file name "benchmark_memory.s". 
 
-Optimize the for-loop in the given code.
+Second, run the baseline code on your system.Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/google/benchmark?tab=readme-ov-file#installation)). Compile and run the benchmark with:
+```bash
+g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
+./benchmark
+```
+Check the benchmarking results, and take a screenshot. Below is an example:
+
+Third, build a optimized for-loop code module BM_OtimizedMemoryAccess in the given code. Hint: Use registers! 
 ```c++
 #include <benchmark/benchmark.h>
 #include <vector>
@@ -77,12 +80,17 @@ static void BM_MemoryAccess(benchmark::State& state) {
 BENCHMARK(BM_MemoryAccess);
 
 static void BM_OtimizedMemoryAccess(benchmark::State& state) {
-    # fill here
+    // fill here
 }
 BENCHMARK(BM_OptimizedMemoryAccess);
 BENCHMARK_MAIN();
 ```
-Complile it and compare its execution speed to see if the performance improves. Also take a screenshot. Below is an example:
+Complile and run the code.
+```bash
+g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
+./benchmark
+```
+Compare its execution speed to see if the performance improves. Also take a screenshot. Below is an example:
+image2
 
-Hint: Use registers!
 
