@@ -64,7 +64,7 @@ Check the benchmarking results, and take a screenshot!! Below is an example:
 <img src="./image1.png" alt="Benchmark Result" width="400">
 
 ### Task 2: Build an optimized for-loop code module BM_OtimizedMemoryAccess in the given code.
-Build a new module called BM_OtimizedMemoryAccess() and a benchmark for it. BM_OtimizedMemoryAccess() should work same as BM_MemoryAccess().
+Build a new module called BM_OtimizedMemoryAccess() and a benchmark for it. BM_OtimizedMemoryAccess() should work same as BM_MemoryAccess(). It should caculate the sum of 1 t0 1000000.
 ```c++
 #include <benchmark/benchmark.h>
 #include <vector>
@@ -85,7 +85,13 @@ static void BM_MemoryAccess(benchmark::State& state) {
 BENCHMARK(BM_MemoryAccess);
 
 static void BM_OtimizedMemoryAccess(benchmark::State& state) {
-    // fill here
+    for (auto _ : state) {
+        int sum = 0;
+        for (int i = 0; i < ARRAY_SIZE; i++) {
+            // Fill here!!
+        }
+        benchmark::DoNotOptimize(sum);
+    }
 }
 BENCHMARK(BM_OptimizedMemoryAccess);
 BENCHMARK_MAIN();
