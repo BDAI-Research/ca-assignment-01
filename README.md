@@ -28,7 +28,7 @@ $ cmake -E make_directory "build"
 $ cmake -E chdir "build" cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release ../
 $ sudo cmake --build "build" --config Release --target install
 ```
-### Run base line code
+### Task 1: Run benchmark of base line code
 Save the below code as benchmark_memory.cpp in your working directory.
 ```c++
 #include <benchmark/benchmark.h>
@@ -50,22 +50,21 @@ static void BM_MemoryAccess(benchmark::State& state) {
 BENCHMARK(BM_MemoryAccess);
 BENCHMARK_MAIN();
 ```
-First, extract assembled code of it. Extract assembled code as a file name "benchmark_memory.s". 
-
-Second, run the baseline code on your system.Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/google/benchmark?tab=readme-ov-file#installation)). Compile and run the benchmark with:
+Extract assembled code of it. Extract assembled code as a file name "benchmark_memory.s". 
 ```bash
-g++ -S -o benchmark_memory.s source.cpp
-g++ -o benchmark_memory benchmark_memory.s
-./benchmark_memory
-
-g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
-./benchmark
+g++ -S -o benchmark_memory.s benchmark_memory.cpp
 ```
-Check the benchmarking results, and take a screenshot. Below is an example:
-Third, build a optimized for-loop code module BM_OtimizedMemoryAccess in the given code. Hint: Use registers!
+Run the baseline code using the assembled code on your system. Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/google/benchmark?tab=readme-ov-file#installation)).
+```bash
+g++ -o benchmark_memory benchmark_memory.s -lbenchmark -lpthread
+./benchmark_memory
+```
+Check the benchmarking results, and take a screenshot!! Below is an example:
 
 <img src="./image1.png" alt="Benchmark Result" width="400">
- 
+
+### Task 2: Build an optimized for-loop code module BM_OtimizedMemoryAccess in the given code.
+Build a new module called BM_OtimizedMemoryAccess() and a benchmark for it. BM_OtimizedMemoryAccess() should work same as BM_MemoryAccess().
 ```c++
 #include <benchmark/benchmark.h>
 #include <vector>
