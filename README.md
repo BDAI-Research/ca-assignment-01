@@ -54,6 +54,10 @@ First, extract assembled code of it. Extract assembled code as a file name "benc
 
 Second, run the baseline code on your system.Ensure Google Benchmark is installed (Refer to [this guide](https://github.com/google/benchmark?tab=readme-ov-file#installation)). Compile and run the benchmark with:
 ```bash
+g++ -S -o benchmark_memory.s source.cpp
+g++ -o benchmark_memory benchmark_memory.s
+./benchmark_memory
+
 g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ./benchmark
 ```
