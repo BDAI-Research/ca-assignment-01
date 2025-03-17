@@ -102,6 +102,7 @@ g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ./benchmark
 ```
 Compare its execution speed to see if the performance improves. Also take a screenshot. Below is an example:
+
 <img src="./image2.png" alt="Benchmark Result" width="400">
 
 
