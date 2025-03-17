@@ -25,7 +25,7 @@ $ cmake -E make_directory "build"
 $ cmake -E chdir "build" cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release ../
 $ sudo cmake --build "build" --config Release --target install
 ```
-## Task 1: Run benchmark of baseline code
+## Task 1: Run benchmark of baseline code.
 Save the below code as benchmark_memory.cpp in your working directory.
 ```c++
 #include <benchmark/benchmark.h>
