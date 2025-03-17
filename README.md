@@ -9,7 +9,7 @@ You have 14 days to complete this assignment. Please read the instructions caref
 - Write C++ code and measure its execution performance using Google Benchmark.
 - Experimentally determine the impact of direct memory access and register utilization on CPU performance.
 
-## Getting started
+## Getting Started
 ### Setup
 To write source code and run Google Benchmark, make sure you have the following packages installed:
 - [Git](https://git-scm.com/downloads)
