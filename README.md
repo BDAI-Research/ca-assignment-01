@@ -11,7 +11,7 @@ You have 14 days to complete this assignment. Please read the instructions caref
 
 ## Getting Started
 ### Setup
-To write source code and run Google Benchmark, make sure you have the following packages installed:
+To write and run source code with Google Benchmark, make sure the following packages are installed on Linux.:
 - [Git](https://git-scm.com/downloads)
 - [CMake](https://cmake.org/download/#latest)
 - [GCC](https://gcc.gnu.org/install/)
