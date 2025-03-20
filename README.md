@@ -1,13 +1,13 @@
-# Assignment 1: Memory Opcodes vs. Register Utilization Performance (using Google Benchmark)
+# Assignment 1: Measuring Code Performance with Google Benchmark
 
 Welcome to the first programming assignment for CAS3102.02-0 at Yonsei University in Spring 2025!
 You have 14 days to complete this assignment. Please read the instructions carefully and ensure that you submit your work on the LearnUs platform (https://learnus.yonsei.ac.kr) before the deadline.
 
 ## Goal of Assignment
 
-- Use [Google Benchmark](https://github.com/google/benchmark) to compare memory access vs. register utilization performance and quantitatively analyse execution time.
+- Use [Google Benchmark](https://github.com/google/benchmark) to compare memory access vs. register utilization performance and quantitatively analyze execution time.
 - Write C++ code and measure its execution performance using Google Benchmark.
-- Experimentally determine the impact of direct memory access and register utilization on CPU performance.
+- Experimentally determine the impact of memory utilization on CPU performance.
 
 ## Getting Started
 ### Setup
@@ -98,7 +98,7 @@ Complile and run the code.
 g++ -o benchmark benchmark_memory.cpp -lbenchmark -lpthread
 ./benchmark
 ```
-Compare its execution speed to see if the performance improves. Also take a screenshot. Below is an example:
+Compare its execution speed to see if the performance improves. Also take a screenshot and explain the reason why code became faster. Below is an example:
 
 <img src="./image2.png" alt="Benchmark Result" width="400">
 
