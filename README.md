@@ -5,7 +5,7 @@ You have 14 days to complete this assignment. Please read the instructions caref
 
 ## Goal of Assignment
 
-- Use [Google Benchmark](https://github.com/google/benchmark) to compare memory access vs. register utilization performance and quantitatively analyze execution time.
+- Use [Google Benchmark](https://github.com/google/benchmark) to quantitatively analyze execution time.
 - Write C++ code and measure its execution performance using Google Benchmark.
 - Experimentally determine the impact of memory utilization on CPU performance.
 
